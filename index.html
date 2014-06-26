@@ -57,71 +57,71 @@
 		</ul>
 	    </div>
 
-	    <li class="step slide equal-distance-children" data-x="5000">
+	    <div class="step slide equal-distance-children" data-x="5000">
 		<h3>Emulator components</h3>
 		<div class="component">CPU</div>
 		<div class="component">GPU</div>
 		<div class="component">MMU</div>
 		<div class="component">Timer / Input / Sound ...</div>
-	    </li>
+	    </div>
 
-	    <li class="step slide" data-x="6000">
+	    <div class="step slide" data-x="6000">
 		<h3>CPU</h3>
 		<p>Basically maps integer to JS code</p>
 		<div class="ex">0x80 means "Add A and B, then put the result in A"</div>
 		<iframe class="show" src="http://www.pastraiser.com/cpu/gameboy/gameboy_opcodes.html"></iframe>
-	    </li>
+	    </div>
 
-	    <li class="step slide" data-x="7000">
+	    <div class="step slide" data-x="7000">
 		<h3>How CPU are typically implemented</h3>
 		<ul>
 		    <li>A huge switch/case table
 		    <li>Array of functions
 		    <li>JIT
 		</ul>
-	    </li>
+	    </div>
 
-	    <li class="step slide" data-x="8000">
+	    <div class="step slide" data-x="8000">
 		<h3>GPU</h3>
                 <p>4-states machine (hblank, vblank, dma, oam)</p>
 		<p>Update the screen texture each frame</p>
 		<p>The Gameboy works with a tile system</p>
 		<div class="show" style="background-image: url(http://i.imgur.com/Q2QiY65.png); background-position: bottom left;"></div>
-	    </li>
+	    </div>
 
-            <li class="step slide" data-x="9000">
+            <div class="step slide" data-x="9000">
                 <h3>Random fun, sorry Scrooge</h3>
                 <div class="show" style="display: flex">
                     <div style="flex: 1; background-image: url(http://i.imgur.com/AzvCn6p.png); background-size: cover; background-position: bottom center;"></div>
                     <div style="flex: none; width: 50px"></div>
                     <div style="flex: 1; background-image: url(http://i.imgur.com/6WBaUkf.png); background-size: cover; background-position: bottom center;"></div>
                 </div>
-            </li>
+            </div>
 
-	    <li class="step slide" data-x="10000">
+	    <div class="step slide" data-x="10000">
 		<h3>MMU</h3>
 		<ul>
 		    <li><strong>Physical memory:</strong> what the driver uses
 		    <li><strong>Virtual memory:</strong> what your program uses
 		</ul>
 		<div class="show" style="background-image: url(http://dysphoria.net/OperatingSystems1/images/paging-mmu.gif); background-size: contains; background-repeat: no-repeat; background-position: center left;"></div>
-	    </li>
+	    </div>
 
-	    <li class="step slide" data-x="11000">
+	    <div class="step slide" data-x="11000">
 		<ul>
 		    <li>Typed Array when possible
 		    <li>Some addresses require callbacks
 			<div class="ex">Writing at 0xFF50 disables the bootrom (took 20 years to crack)</div>
 			<div class="ex">Writing in the 0x0000-0x1FFF range enables the extra RAM</div>
 		</ul>
-	    </li>
+	    </div>
 
-	    <li class="step slide center" data-x="12000">
+	    <div class="step slide center" data-x="12000">
 		<h2>How does this port in Javascript?</h2>
                 <h2>Let's use Virt.js!</h2>
-	    </li>
+	    </div>
 
-            <li class="step slide equal-distance-children" data-x="13000">
+            <div class="step slide equal-distance-children" data-x="13000">
                 <h2>Many features</h2>
                 <ul>
                     <li>Node-compatible
@@ -130,42 +130,46 @@
                     <li>Simple API
                     <li>Debug tools
                 </ul>
-            </li>
+            </div>
 
-	    <li class="step slide" data-x="14000">
+	    <div class="step slide" data-x="14000">
 		<script src="https://gist.github.com/arcanis/e508860ca3dbdce19e8b.js"></script>
-	    </li>
+	    </div>
 
-	    <li class="step slide center" data-x="15000">
+	    <div class="step slide center" data-x="15000">
 		<h2>Some examples!</h2>
-	    </li>
+	    </div>
 
-	    <li class="step slide center" data-x="16000">
+	    <div class="step slide center" data-x="16000">
 		<h2>Evolutions to come</h2>
-	    </li>
+	    </div>
 
-	    <li class="step slide" data-x="17000">
+	    <div class="step slide" data-x="17000">
 		<h2>Full ES6</h2>
 		<div class="show" style="background-image: url(http://i.imgur.com/GHeYa77.png)"></div>
-	    </li>
+	    </div>
 
-	    <li class="step slide" data-x="18000">
+	    <div class="step slide" data-x="18000">
 		<h2>JIT!</h2>
 		<div class="show" style="background-image: url(http://i.imgur.com/GLh91va.png)"></div>
-	    </li>
+	    </div>
 
-	    <li class="step slide" data-x="19000">
+	    <div class="step slide" data-x="19000">
 		<h2>More systems</h2>
 		<p>(and more contributors :)</p>
 		<div class="show" style="background-image: url(http://www.pixlbit.com/media/generic/1763.jpg); background-size: cover; background-position: bottom"></div>
-	    </li>
+	    </div>
 
-            <li class="step slide" data-x="20000">
+            <div class="step slide" data-x="20000">
                 <h2>Here we are !</h2>
                 <p>Waiting for your feedbacks</p>
                 <iframe class="show" src="./pokelib/example/">
                 </iframe>
-            </li>
+            </div>
+
+            <div class="step slide" data-x="21000">
+                <div class="show" style="background-image: url(http://i.imgur.com/pJ3Tnt5.jpg); background-size: cover; background-position: center center;"></div>
+            </div>
 
 	</div>
 
